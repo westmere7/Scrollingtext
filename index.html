@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto-Scrolling Words Example</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>
+  body {
+    background-color: 21213b;
+    margin: 0;
+    overflow-x: hidden;
+    font-size: 30vw; /* Responsive font size */
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide overflow */
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+  }
+  .words {
+    display: inline-block;
+    padding: 0 1rem; /* Add padding for better visibility */
+    animation: move 130s linear infinite; /* Adjust animation duration as needed */
+    color: transparent; /* Hide text color */
+    background: linear-gradient(to bottom, #2a2a4f, #21213b); /* Text gradient */
+    -webkit-background-clip: text; /* Clip text to background */
+    -webkit-text-fill-color: transparent; /* Make text transparent */
+  }
+  @keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+ transform: translateX(calc(-100% + 100vw)); /* Adjust based on number of words */    }
+  }
+</style>
+</head>
+<body>
+  <div class="words">
+    Typography Layout Color Theory Visual Hierarchy Composition Grids Vector Illustration Digital Media Print Media Brand Identity Logotype Typeface Texture Contrast Balance Alignment Symbolism
+  </div>
+</body>
+</html>
